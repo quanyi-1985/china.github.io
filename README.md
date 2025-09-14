@@ -1,2 +1,466 @@
 # china.github.io
 zheshi wode jingtai wangzhan
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+
+ <link rel="icon" href="https://raw.githubusercontent.com/quanyi-1985/New-repository/main/权宜.ico" type="image/x-icon">   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="这是一个基础的HTML框架">
+
+    <meta name="keywords" content="HTML, 框架, 基础">
+    <meta name="author" content="你的名字">
+    
+    <!-- 外部资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 页面标题 -->
+    <title>权宜看视界</title>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#8B5CF6',
+                        dark: '#1F2937',
+                        light: '#F3F4F6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light text-dark antialiased">
+    <!-- 页面加载动画 -->
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50 transition-opacity duration-500">
+        <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-40 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://raw.githubusercontent.com/quanyi-1985/New-repository/main/权宜.ico" alt="权宜看视界" class="w-8 h-8"></i>
+                <span class="text-xl font-bold text-primary"> 权宜看视界</span>
+            </a>
+            
+            <!-- 桌面导航 -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="font-medium hover:text-primary transition-colors">首页</a>
+                <a href="#features" class="font-medium hover:text-primary transition-colors">功能</a>
+                <a href="#about" class="font-medium hover:text-primary transition-colors">关于</a>
+                <a href="#contact" class="font-medium hover:text-primary transition-colors">联系</a>
+            </nav>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menuBtn" class="md:hidden text-dark hover:text-primary transition-colors">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t animate-fadeIn">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#home" class="font-medium py-2 hover:text-primary transition-colors">首页</a>
+                <a href="#features" class="font-medium py-2 hover:text-primary transition-colors">功能</a>
+                <a href="#about" class="font-medium py-2 hover:text-primary transition-colors">关于</a>
+                <a href="#contact" class="font-medium py-2 hover:text-primary transition-colors">联系</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section id="home" class="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 to-accent/5">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow mb-6">
+                            权宜看视界<br><span class="text-primary">定格世界的瞬间，解读背后的故事</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                            定格世界的瞬间，解读背后的故事。
+在这里，我们不仅分享打动人心的旅行故事，更深度解析每一张精彩照片背后的构思、技巧与情感。无论你是寻找灵感的旅行者，还是痴迷光影的摄影爱好者，都能在这里找到共鸣与启发。开启一段视觉与心灵的旅程，探索世界，也探索摄影的无限可能。立即加入我们！。
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#features" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                查看功能
+                            </a>
+                            <a href="#contact" class="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/5 transition-all">
+                                联系我们
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://picsum.photos/600/400" alt="HTML框架展示图" class="rounded-xl shadow-2xl w-full h-auto transform hover:scale-[1.02] transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能区域 -->
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">行影相生</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">深度解读影像与故事，让每一次旅程在光影与文字间重生</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 功能卡片1 -->
+                    <div class="bg-light rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100 transform hover:-translate-y-1 duration-300">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fa fa-mobile-alt text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">深度叙事与影像美学</h3>
+                        <p class="text-gray-600">专注于呈现打动人心的旅行故事深层脉络（文化、情感、际遇），并深度解析精彩影像背后的视觉语言（构图、光线、色彩、瞬间捕捉、叙事技巧）。不止展现“是什么”，更揭示“为什么”和“如何做到”。</p>
+                    </div>
+                    
+                    <!-- 功能卡片2 -->
+                    <div class="bg-light rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100 transform hover:-translate-y-1 duration-300">
+                        <div class="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fa fa-paint-brush text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">视觉思维与情感共鸣</h3>
+                        <p class="text-gray-600">培养用户通过摄影师的视角观察世界，理解影像如何传递情感、讲述故事；同时激发用户通过旅行者的心灵感知旅程，在故事与影像中找到深刻的情感联结与启发。架起技术分析与心灵触动的桥梁。</p>
+                    </div>
+                    
+                    <!-- 功能卡片3 -->
+                    <div class="bg-light rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100 transform hover:-translate-y-1 duration-300">
+                        <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fa fa-bolt text-accent text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">专业解读与灵感激发</h3>
+                        <p class="text-gray-600">提供专业、可借鉴的摄影分析洞见，帮助用户提升摄影素养和解构影像的能力；同时通过独特、富有洞察力的旅行叙事，为用户规划旅程、观察世界、捕捉瞬间提供持续的创意灵感。目标是成为用户提升旅行与摄影维度的重要灵感库与知识站。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于区域 -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <img src="https://picsum.photos/600/500" alt="关于我们" class="rounded-xl shadow-xl w-full h-auto">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">大理周城，靛蓝深处的时间褶皱</h2>
+  
+                      <p class="text-gray-600 mb-4">
+    
+                        大理的阳光，似乎比其他地方更懂得如何穿透尘埃，明晃晃地泼洒在周城青石板铺就的小路上。我背着相机，漫无目的地游荡，逃离了洱海边熙攘的打卡人潮，一头扎进这座以白族扎染闻名的小镇腹地。空气里弥漫着一股独特的气味——不是花香，也不是泥土的芬芳，而是一种沉郁的、带着植物清苦的靛蓝之息。它牵引着我，拐进了一条窄巷。
+
+巷子尽头，一扇斑驳的木门虚掩着。探头望去，一方小小的院落，竟成了光的容器。午后的阳光斜斜地穿过老瓦房的屋檐，精准地切割开明与暗。就在那片被阳光点亮的区域里，一位身着靛蓝布衣的白族老奶奶，正佝偻着背，专注地摆弄着浸泡在巨大木桶里的布匹。
+
+那木桶里的蓝，深邃得惊人。它不像天空的湛蓝那样轻盈，也不似海水的蔚蓝那般辽阔，而是一种沉淀了时间的颜色，浓稠得像化不开的夜色，却又在阳光的亲吻下，泛出丝绸般温润的光泽。老奶奶布满沟壑的手，熟练地将一匹扎结好的白布浸入其中，提起，抖落一串串如蓝宝石般的液滴，再缓缓浸入。每一次沉浮，都像是一次古老的仪式，布匹贪婪地吮吸着这来自板蓝根的秘密汁液，渐渐蜕变。
+
+我屏住呼吸，悄悄举起相机。镜头里，她专注的侧脸被光影雕刻得棱角分明，银白的发丝在逆光中几乎透明。深蓝的染液在她指尖流淌，滴落回木桶，漾开一圈圈涟漪，倒映着屋檐上方的方寸蓝天。那一刻，视觉的冲击力是巨大的——极致的沉静与蓬勃的生命力在同一个画面里交织：老人缓慢的动作、靛蓝的深邃、阳光的炽烈、水滴的动感。我调整着光圈，试图捕捉这动与静的微妙平衡，让快门定格这劳作的诗意。
+
+就在我按下快门的瞬间，轻微的“咔嚓”声似乎惊动了她。老人缓缓抬起头，目光穿透镜头，直接落在我脸上。没有被打扰的不悦，那双阅尽沧桑的眼睛里，只有一种洞悉一切的平和。她甚至没有停下手中的动作，只是嘴角牵起一个极淡、极淡的弧度，仿佛在说：“看吧，这就是生活本来的颜色。” 那一刻的快门声，在我听来，竟像是苍山落雪般寂静。
+
+后来我才知道，每一块完美的扎染布匹，都需要经历数十次甚至上百次这样的浸染、氧化、固色。每一次沉入靛缸，都是与时间的一次深度对话，是植物精魂与人类智慧在纤维纹理上的漫长书写。那些最终呈现出的、如星空、如冰纹般绝美的图案，并非偶然的泼洒，而是无数次精心折叠、捆扎后，在时光的催化下，必然绽放的蓝。
+
+离开周城时，背包里多了一块小小的扎染方巾。它远不如我镜头捕捉的那块在光影中舞动的布料惊艳。但每当触摸到它粗粝而温润的质感，闻到那若有似无的植物气息，眼前总会浮现那个被靛蓝浸透的小院，那位与时间和解的老人，以及那桶仿佛能凝固时光的深蓝。旅行中那些宏大的风景或许会模糊，但这种深入肌理的、带着劳作温度与植物呼吸的瞬间，却像一道烙印，提醒我：最动人的故事，往往藏在最朴素的日常褶皱里，等待着一束光，和一颗愿意慢下来解读的心。
+   
+                     </p>
+          
+              <p class="text-gray-600 mb-6">
+    
+                        摄影者思： 这次拍摄让我深刻体会到，摄影不仅是捕捉“决定性瞬间”，更是解读“过程之美”。周城的靛蓝，其魅力不仅在于最终成品的图案，更在于染布人日复一日、浸入时光的劳作本身。光线、色彩、动作、纹理、人物的神态，共同构成了一幅活着的民俗画卷。拍摄时，我刻意放慢节奏，用较小的光圈（如f/8）保证景深，确保老人、染缸、光影细节都清晰可辨，同时用稍慢的快门（如1/60s）稍稍虚化她翻动布匹的手部动作，以传递一种动态的韵律感。后期处理时，着重强化了靛蓝的深邃和木桶、布匹的质感，让画面传递出那种沉淀与呼吸并存的独特氛围。        
+                </p>
+                
+        <ul class="space-y-3">
+          
+                  <li class="flex items-start">
+     
+                           <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>强烈的画面感与感官细节： 着重描写了光线、色彩（靛蓝）、声音（滴水声、快门声）、气味（植物清苦），让读者仿佛身临其境，符合摄影分析所需的视觉基础。</span>
+     
+                       </li>
+                            <li class="flex items-start">
+         
+                       <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+  
+                              <span>核心摄影瞬间的捕捉与解读： 详细描述了拍摄时的场景构成（光影、人物、动作）、摄影者的思考（动与静的平衡）以及具体的技术选择（光圈、快门）和意图（传递韵律感、质感）。将摄影行为本身融入了叙事。</span>
+  
+                          </li>
+  
+                          <li class="flex items-start">
+           
+                     <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>深度思考与哲思升华： 从具体的扎染过程（折叠、浸染、氧化）引申到对“时间”、“过程之美”、“必然与偶然”的思考，将旅行见闻提升到文化和哲理的层面，与单纯的游记区分开。</span>
+  
+                   
+       </li>
+                     
+       <li class="flex items-start">
+ 
+                               <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+   
+                             <span>人文关怀与情感联结： 聚焦于一位普通匠人，通过她的眼神、动作，传递出宁静、坚韧和智慧，建立了读者与拍摄对象的情感联结。</span>
+       
+                     </li>
+  
+ </li>
+                     
+       <li class="flex items-start">
+ 
+                               <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+   
+                             <span>独特的视角： 没有选择大理最热门的网红点，而是深入一个传统工艺村落，提供了相对独特且有深度的观察视角。</span>
+       
+                     </li>
+   
+
+
+                      </ul>
+     
+               </div>
+       
+         </div>
+    
+        </div>
+      
+  </section>
+
+      
+  <!-- 联系区域 -->
+       
+ <section id="contact" class="py-20 bg-white">
+    
+        <div class="container mx-auto px-4">
+      
+          <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">联系我们</h2>
+                    <p class="text-gray-600">有任何问题或建议？请填写下面的表单与我们联系</p>
+                </div>
+                
+                <div class="max-w-2xl mx-auto">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的姓名" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的邮箱" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主题</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入主题" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">留言</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的留言内容" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            发送留言
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="https://raw.githubusercontent.com/quanyi-1985/New-repository/main/权宜.ico" alt="权宜看视界" class="w-8 h-8">
+                        <spanh class="text-xl font-bold">权宜看视界</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">定格故事，解读光影。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-github text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">快速链接</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">功能</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">关于</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">资源</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">文档</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">教程</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">示例</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">更新日志</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">联系我们</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">chinafjh@126.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">+44 0742 257 2692</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 High Street, Camden, LONDON, NW1 2HD, UNITED KINGDOM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 权宜看视界. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 页面加载动画
+            setTimeout(function() {
+                const loader = document.getElementById('loader');
+                loader.classList.add('opacity-0');
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 800);
+            
+            // 移动端菜单切换
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+            
+            // 导航栏滚动效果
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2', 'shadow-md');
+                    navbar.classList.remove('py-3', 'shadow-sm');
+                } else {
+                    navbar.classList.add('py-3', 'shadow-sm');
+                    navbar.classList.remove('py-2', 'shadow-md');
+                }
+            });
+            
+            // 返回顶部按钮
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // 关闭移动端菜单（如果打开）
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 表单提交处理
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 模拟表单提交
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> 发送中...';
+                
+                setTimeout(function() {
+                    // 模拟提交成功
+                    alert('留言发送成功！我们会尽快回复您。');
+                    contactForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
