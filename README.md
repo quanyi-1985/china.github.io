@@ -298,9 +298,91 @@ zheshi wode jingtai wangzhan
                     </div>
                     <p class="text-gray-400 mb-6">定格故事，解读光影。</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-github text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-linkedin text-xl"></i></a>
+
+                   <!-- 社交媒体二维码区域 -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center p-6">
+  <!-- 微信 -->
+  <a 
+    href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIzMjI1OTE0MQ==&scene=124#wechat_redirect"
+    target="_blank"
+    class="group flex flex-col items-center text-center w-28 sm:w-32 bg-white/5 rounded-xl shadow-lg p-4 hover:bg-white/10 transition"
+    aria-label="微信公众号二维码"
+  >
+    <i class="fab fa-weixin text-2xl text-green-600 mb-2 group-hover:scale-110 transition-transform"></i>
+    <img 
+      src="https://raw.githubusercontent.com/quanyi-1985/New-repository/main/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9D%83%E5%AE%9C.jpg"
+      alt="微信公众号二维码"
+      class="w-20 h-20 object-contain rounded-md shadow-md group-hover:scale-105 transition-transform"
+      loading="lazy"
+    >
+    <span class="mt-2 text-sm text-gray-300">微信</span>
+  </a>
+
+  <!-- Facebook -->
+  <a 
+    href="https://www.facebook.com/share/1DDZMmMbpZ/?mibextid=wwXIfr" 
+    target="_blank"
+    class="group flex flex-col items-center text-center w-28 sm:w-32 bg-white/5 rounded-xl shadow-lg p-4 hover:bg-white/10 transition"
+    aria-label="Facebook 二维码"
+  >
+    <i class="fab fa-facebook text-2xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+    <img 
+      src="https://github.com/quanyi-1985/New-repository/raw/main/facebook%E4%BA%8C%E7%BB%B4%E7%A0%81.png"
+      alt="Facebook 二维码"
+      class="w-20 h-20 object-contain rounded-md shadow-md group-hover:scale-105 transition-transform"
+      loading="lazy"
+    >
+    <span class="mt-2 text-sm text-gray-300">Facebook</span>
+  </a>
+
+  <!-- Instagram -->
+  <a 
+    href="https://www.instagram.com/quan_yi_2017?igsh=MTg0czN0bzVvdTBndQ%3D%3D&utm_source=qr"
+    target="_blank"
+    class="group flex flex-col items-center text-center w-28 sm:w-32 bg-white/5 rounded-xl shadow-lg p-4 hover:bg-white/10 transition"
+    aria-label="Instagram 二维码"
+  >
+    <i class="fab fa-instagram text-2xl text-pink-500 mb-2 group-hover:scale-110 transition-transform"></i>
+    <img 
+      src="https://github.com/quanyi-1985/New-repository/raw/main/Instagram%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg"
+      alt="Instagram 二维码"
+      class="w-20 h-20 object-contain rounded-md shadow-md group-hover:scale-105 transition-transform"
+      loading="lazy"
+    >
+    <span class="mt-2 text-sm text-gray-300">Instagram</span>
+  </a>
+
+  <!-- TikTok -->
+  <a 
+    href="https://www.tiktok.com/@quan.yi?_t=ZN-8ziFcLRDWf0&_r=1"
+    target="_blank"
+    class="group flex flex-col items-center text-center w-28 sm:w-32 bg-white/5 rounded-xl shadow-lg p-4 hover:bg-white/10 transition"
+    aria-label="TikTok 二维码"
+  >
+    <i class="fab fa-tiktok text-2xl text-white mb-2 group-hover:scale-110 transition-transform"></i>
+    <img 
+      src="https://raw.githubusercontent.com/quanyi-1985/New-repository/main/TikTok%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg"
+      alt="TikTok 二维码"
+      class="w-20 h-20 object-contain rounded-md shadow-md group-hover:scale-105 transition-transform"
+      loading="lazy"
+    >
+    <span class="mt-2 text-sm text-gray-300">TikTok</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                       
                     </div>
                 </div>
                 
