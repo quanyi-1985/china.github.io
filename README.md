@@ -418,6 +418,10 @@ zheshi wode jingtai wangzhan
                             <span class="text-gray-400">+44 0742 257 2692</span>
                         </li>
                         <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">+1 669 358 7758</span>
+                        </li>
+                        <li class="flex items-start">
                             <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
                             <span class="text-gray-400">123 High Street, Camden, LONDON, NW1 2HD, UNITED KINGDOM</span>
                         </li>
